@@ -1,5 +1,4 @@
-module.exports = {
-  MONGODB:
-    'mymongodB',
-  SECRET_KEY: 'some very secret key'
-};
+module.exports={
+    MONGODB='moj adres mongo db',
+    SECRET_KEY='sdfsdfsdfsd68wbp'
+}

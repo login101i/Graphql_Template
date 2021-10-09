@@ -1,20 +1,21 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-export const useForm = (callback, initialState = {}) => {
-  const [values, setValues] = useState(initialState);
+export const useForm = (callBack, initialState = {}) => {
+  const onChange = (e) => {
+    const [values, setValues] = useState(initialState);
 
-  const onChange = (event) => {
-    setValues({ ...values, [event.target.name]: event.target.value });
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-    callback();
+  const onSubmit = (e) => {
+    e.preventDefault();
+    callBack();
+    //? Ta fukcja nie jest nigdzie zapisana, po prostu jest w [ ] w useMutation
   };
 
   return {
     onChange,
     onSubmit,
-    values
+    values,
   };
 };
