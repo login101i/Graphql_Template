@@ -1,14 +1,13 @@
 {
-  "name": "merng",
+  "name": "apollo_server_app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "node index",
-    "start": "node index"
+    "start": "nodemon index",
+    "serve":"node index"
   },
-  "keywords": [],
-  "author": "",
+  "author": "mckrus",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.5.0",
